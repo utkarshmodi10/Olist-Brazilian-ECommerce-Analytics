@@ -1,0 +1,24 @@
+# Excel temporary & recovery files (>100 MB, blocked by GitHub)
+Olist(recovered).xlsx
+*.xlsx~
+*.xlsx
+
+# Optional: Ignore raw csv if over 100MB (Kaggle dataset link is already in README)
+# *.csv
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv/
+env/
+
+# OS/Editor generated files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Jupyter Notebooks
+*.ipynb
+.ipynb_checkpoints/
