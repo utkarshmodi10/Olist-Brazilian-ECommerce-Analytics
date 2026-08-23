@@ -21,7 +21,7 @@ This project analyzes **100,000+ orders** from **Olist** (2016 to 2018) by integ
 - **Logistics and RCA:** Measure SLA adherence, freight disparities, and isolate root causes of delivery failures.
 - **Product Merchandising:** Identify top GMV drivers via Pareto analysis and cross-category bundling synergies.
 - **Seasonality and Geography:** Map hourly demand spikes and regional buyer-seller imbalances.
-- **Review Intelligence:** Translate and model customer reviews to isolate satisfaction and complaint drivers.
+- **Review Intelligence:** Model customer reviews to isolate satisfaction and complaint drivers.
 - **Seller and Payment Economics:** Benchmark top seller fulfillment reliability and customer installment habits.
 
 ---
@@ -30,7 +30,6 @@ This project analyzes **100,000+ orders** from **Olist** (2016 to 2018) by integ
 
 - **Microsoft Excel:** Interactive dashboards and dynamic pivot tables.
 - **Python (Pandas and NumPy):** Data cleaning, timestamp conversion, multi-table joins, and feature engineering.
-- **Large Language Models (`agno` and Groq API):** Automated English translation pipeline for Portuguese customer reviews.
 - **Visualization and Text Analytics:** Pareto charts, geographic distribution plots, heatmaps, N-gram distributions, and multi-language word clouds.
 
 ---
@@ -73,13 +72,8 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
 </div>
 
 <div align="center">
- <img src="./Chart/Revenue_trend.png" alt="Monthly Revenue Trend" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 4: Monthly Revenue Trend (September 2016 to August 2018).</em></p>
-</div>
-
-<div align="center">
  <img src="./Chart/Order_each_month.png" alt="Numbers of Order in Each Month" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 5: Monthly Order Volume Trajectory.</em></p>
+ <p><em>Figure 4: Monthly Order Volume Trajectory.</em></p>
 </div>
 
 #### Key Findings
@@ -96,57 +90,57 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
 
 <div align="center">
  <img src="./Chart/State_Pairwise_logistic_analysis.png" alt="State Pair-wise Logistic Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 6: State Pair-wise Logistics Heatmap.</em></p>
+ <p><em>Figure 5: State Pair-wise Logistics Heatmap.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/State_Pairwise_Freight_analysis.png" alt="State Pair-wise Freight Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 7: State Pair-wise Freight Heatmap.</em></p>
+ <p><em>Figure 6: State Pair-wise Freight Heatmap.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Top_city_pairs.png" alt="Top City Pairs Logistics Performance" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 8: Top City Pairs Delivery Analysis.</em></p>
+ <p><em>Figure 7: Top City Pairs Delivery Analysis.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Mean_delivery_days_by_customer_state.png" alt="Mean Delivery Days by Customer State" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 9: Mean Delivery Days by Customer State.</em></p>
+ <p><em>Figure 8: Mean Delivery Days by Customer State.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Late_deliveries_by_state.png" alt="Late Deliveries by State" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 10: Late Deliveries Distribution by Customer State.</em></p>
+ <p><em>Figure 9: Late Deliveries Distribution by Customer State.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Mean_freight_by_customer_state.png" alt="Mean Freight by Customer State" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 11: Mean Freight by Customer State.</em></p>
+ <p><em>Figure 10: Mean Freight by Customer State.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Intrastate_and_Interstate.png" alt="Intrastate vs Interstate Delivery" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 12: Intrastate vs. Interstate Logistic Performance.</em></p>
+ <p><em>Figure 11: Intrastate vs. Interstate Logistic Performance.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/delivery_performance.png" alt="Monthly Delivery Performance" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 13: Monthly Delivery Performance against Estimated Deadlines.</em></p>
+ <p><em>Figure 12: Monthly Delivery Performance against Estimated Deadlines.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Non_Delivered_Order_Value.png" alt="Non Delivered Order Value" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 14: Financial Impact of Undelivered and Canceled Orders Over Time.</em></p>
+ <p><em>Figure 13: Financial Impact of Undelivered and Canceled Orders Over Time.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/review_score_distribution.png" alt="Distribution of Review Score" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 15: Review Score Distribution.</em></p>
+ <p><em>Figure 14: Review Score Distribution.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Late_delivery_percentage_by_review_score.png" alt="Late Delivery Percentage by Review Score" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 16: Late Delivery Percentage by Review Score.</em></p>
+ <p><em>Figure 15: Late Delivery Percentage by Review Score.</em></p>
 </div>
 
 #### Key Findings
@@ -181,17 +175,17 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
 
 <div align="center">
  <img src="./Chart/Order_Status_Analysis.png" alt="Order Status Analysis by Month" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 17: Monthly Order Status Breakdown (Canceled, Shipped, Invoiced, Processing).</em></p>
+ <p><em>Figure 16: Monthly Order Status Breakdown (Canceled, Shipped, Invoiced, Processing).</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Late_delivery_rate_by_month.png" alt="Order Volume and Late Delivery Rate Over Time" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 18: Monthly Late Delivery Rate vs. Order Volume Trajectory.</em></p>
+ <p><em>Figure 17: Monthly Late Delivery Rate vs. Order Volume Trajectory.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Time_taken_at_delivery_stages.png" alt="Average Time Taken at Different Stages of Delivery" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 19: Average Time Taken Across Fulfillment Stages vs. Historical Baseline.</em></p>
+ <p><em>Figure 18: Average Time Taken Across Fulfillment Stages vs. Historical Baseline.</em></p>
 </div>
 
 #### Root Cause Analysis Key Findings
@@ -207,32 +201,32 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
 
 <div align="center">
  <img src="./Chart/Co-occurrence Matrix.png" alt="Co-occurrence Matrix" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 20: Product Category Co-occurrence Heatmap Matrix.</em></p>
+ <p><em>Figure 19: Product Category Co-occurrence Heatmap Matrix.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Category_analysis.png" alt="Category Analysis Breakdown" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 21: Product Category Performance and Distribution Analysis.</em></p>
+ <p><em>Figure 20: Product Category Performance and Distribution Analysis.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Basket_Analysis.png" alt="Market Basket Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 22: Market Basket and Co-Purchasing Association Analysis.</em></p>
+ <p><em>Figure 21: Market Basket and Co-Purchasing Association Analysis.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/pareto_analysis.png" alt="Pareto Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 23: Pareto Cumulative Contribution Analysis.</em></p>
+ <p><em>Figure 22: Pareto Cumulative Contribution Analysis.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Product_by_revenue.png" alt="Product by Revenue" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 24: Products by Revenue.</em></p>
+ <p><em>Figure 23: Products by Revenue.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Revenue_by_product_category.png" alt="Revenue by Product Category" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 25: Top 10 Product Categories by Revenue.</em></p>
+ <p><em>Figure 24: Top 10 Product Categories by Revenue.</em></p>
 </div>
 
 #### Top Category Co-occurrence Pairings
@@ -259,12 +253,12 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
 
 <div align="center">
  <img src="./Chart/Seasonality_Heatmap.png" alt="Category Seasonality Heatmap" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 26: Top 20 Product Categories Monthly Demand Seasonality Heatmap.</em></p>
+ <p><em>Figure 25: Top 20 Product Categories Monthly Demand Seasonality Heatmap.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Nov2017_timeline.png" alt="Purchase Timeline of Nov 2017" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 27: Day-and-Hour Purchase Heatmap for November 2017.</em></p>
+ <p><em>Figure 26: Day-and-Hour Purchase Heatmap for November 2017.</em></p>
 </div>
 
 #### Key Findings
@@ -289,37 +283,37 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
  <br>
  <img src="./Chart/AOV_by_state.png" alt="AOV by State" width="45%" style="border-radius: 8px; margin-right: 2%; margin-bottom: 15px;" />
  <img src="./Chart/ARPU_by_state.png" alt="ARPU by State" width="45%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 28: Geographic Distribution of Key Metrics (Revenue, Orders, Customers, Sellers, AOV, ARPU) across Brazilian States.</em></p>
+ <p><em>Figure 27: Geographic Distribution of Key Metrics (Revenue, Orders, Customers, Sellers, AOV, ARPU) across Brazilian States.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Brazil_coordinates.png" alt="Brazil Map Coordinates" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 29: Geographic Plot of Brazilian Coordinates.</em></p>
+ <p><em>Figure 28: Geographic Plot of Brazilian Coordinates.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/South_america.png" alt="South America Regional Map" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 30: South America Regional Geographic Map.</em></p>
+ <p><em>Figure 29: South America Regional Geographic Map.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Top-10_state_by_customer.png" alt="Top 10 States based on Customer and Seller" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 31: Customer vs. Seller Distribution by State.</em></p>
+ <p><em>Figure 30: Customer vs. Seller Distribution by State.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Revenue_by_top10_state.png" alt="Revenue Generation of Top-10 State" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 32: Revenue Contribution by Top 10 States.</em></p>
+ <p><em>Figure 31: Revenue Contribution by Top 10 States.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Orders_by_seller_state.png" alt="Orders by Seller State" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 33: Orders by Seller State.</em></p>
+ <p><em>Figure 32: Orders by Seller State.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Orders_per_seller_by_state.png" alt="Orders per Seller by State" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 34: Average Orders per Seller by State.</em></p>
+ <p><em>Figure 33: Average Orders per Seller by State.</em></p>
 </div>
 
 #### Key Findings
@@ -329,52 +323,20 @@ The raw dataset spans **11 CSV files** connected via primary and foreign keys (e
 
 ---
 
-### 7. Natural Language Processing and AI Review Translation
-
-To analyze Portuguese customer reviews in English, a translation pipeline was set up using **Python, Agno (`Agent`), Groq, and Pydantic** to automate translation and structure the text for sentiment analysis.
-
-#### Translation Pipeline Code Snippet
-
-```python
-import pandas as pd
-from agno.agent import Agent
-from agno.models.groq import Groq
-from pydantic import BaseModel, Field
-import time
-
-df = pd.read_csv("/content/olist_order_reviews_dataset.csv")
-new_df = df.dropna(subset=["review_comment_message"], how="all")
-
-new_df_1 = new_df.set_index("review_id")["review_comment_message"].to_dict()
-
-class Response(BaseModel):
- english: str = Field(..., description="Give the english translated text")
-
-agent = Agent(
- model=Groq(id="qwen/qwen3-32b", api_key="<API-Key>"),
- instructions="You are a Portuguese to English translator.",
- output_schema=Response
-)
-
-translated_df = {}
-for i, j in list(new_df_1.items())[:500]:
- response = agent.run(j, output_schema=Response)
- translated_df[i] = response.content.english
- time.sleep(3)
-```
+### 7. Natural Language Processing and Review Analytics
 
 #### Review Sentiment Analysis
 
 - The translated reviews dataset (from Kaggle) replaced original Portuguese columns with English translations:
- - `review_comment_title` (translated via Google Cloud API)
- - `review_comment_message` (translated via Google Cloud API)
+ - `review_comment_title`
+ - `review_comment_message`
 
 - Sentiment was analyzed using **TextBlob** and **VADER**.
  - Both tools rely on predefined lexicons where words have positive or negative weights. They scan sentences, look up words in their dictionary, and calculate an aggregate sentiment score.
 
 <div align="center">
  <img src="./Chart/Sentiment_by_review_bucket.png" alt="Sentiment Score Distribution by Review Score Bucket" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 35: Sentiment Score Distribution Across Review Score Buckets.</em></p>
+ <p><em>Figure 34: Sentiment Score Distribution Across Review Score Buckets.</em></p>
 </div>
 
 ##### Limitations of TextBlob and VADER
@@ -404,22 +366,22 @@ Because both tools are rule-based, they do not understand context. Typical failu
 
 <div align="center">
  <img src="./Chart/Positive_review_Ngrams.png" alt="Positive Review N-Grams Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 36: Top Positive Review N-Grams and Key Phrases.</em></p>
+ <p><em>Figure 35: Top Positive Review N-Grams and Key Phrases.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Negative_review_Ngrams.png" alt="Negative Review N-Grams Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 37: Top Negative Review N-Grams and Key Phrases.</em></p>
+ <p><em>Figure 36: Top Negative Review N-Grams and Key Phrases.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Portuguese_wordcloud.png" alt="Portuguese Word Cloud Analytics" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 38: Portuguese Word Cloud Analysis.</em></p>
+ <p><em>Figure 37: Portuguese Word Cloud Analysis.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/English_wordcloud.png" alt="English Word Cloud Analytics" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 39: English Translated Word Cloud Analysis.</em></p>
+ <p><em>Figure 38: English Translated Word Cloud Analysis.</em></p>
 </div>
 
 ##### Text Analytics Key Findings
@@ -435,12 +397,12 @@ Because both tools are rule-based, they do not understand context. Typical failu
 
 <div align="center">
  <img src="./Chart/Seller_Order_Analysis.png" alt="Seller Order Volume Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 40: Seller Order Volume and Revenue Performance Distribution.</em></p>
+ <p><em>Figure 39: Seller Order Volume and Revenue Performance Distribution.</em></p>
 </div>
 
 <div align="center">
  <img src="./Chart/Seller_analysis.png" alt="Seller Fulfillment Analysis" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 41: Seller Fulfillment Distribution and Order Status Breakdown.</em></p>
+ <p><em>Figure 40: Seller Fulfillment Distribution and Order Status Breakdown.</em></p>
 </div>
 
 #### Top 5 Sellers by Gross Revenue and Order Fulfillment Breakdown
@@ -465,7 +427,7 @@ Because both tools are rule-based, they do not understand context. Typical failu
 
 <div align="center">
  <img src="./Chart/payment_type.png" alt="Number of Order based on Payment Type" width="85%" style="border-radius: 8px; margin-bottom: 15px;" />
- <p><em>Figure 42: Payment Method Distribution.</em></p>
+ <p><em>Figure 41: Payment Method Distribution.</em></p>
 </div>
 
 #### Key Findings
